@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify – Web Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify">
+            </div>
+            <nav class="nav-links">
+                <div class="link active"><i class="fas fa-home"></i> Home</div>
+                <div class="link"><i class="fas fa-search"></i> Search</div>
+                <div class="link"><i class="fas fa-lines-leaning"></i> Your Library</div>
+            </nav>
+            <div class="nav-links extra">
+                <div class="link"><i class="fas fa-plus-square"></i> Create Playlist</div>
+                <div class="link"><i class="fas fa-heart"></i> Liked Songs</div>
+            </div>
+            <div class="divider"></div>
+            <div class="playlist-list">
+                <span>My Playlist #1</span>
+                <p>My Playlist #2</p>
+                <p>My Playlist #3</p>
+                <p>My Playlist #4</p>
+            </div>
+        </aside>
+
+        <main class="main-content" id="scroll-container">
+            <header class="sticky-header" id="header">
+                <div class="nav-arrows">
+                    <button class="arrow"><i class="fas fa-chevron-left"></i></button>
+                    <button class="arrow"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="user-pill" id="userBtn">
+                    <img src="assets/profile.png" alt="user" width="60" height="60" style="border-radius: 20%;">
+                    <span>Avinash</span>
+                    <i class="fas fa-caret-down"></i>
+                    
+                    <div class="user-dropdown" id="userMenu">
+                        <div class="item">Profile</div>
+                        <div class="item border">Log out</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="sections-container" id="home-view">
+                <section class="shelf">
+                    <div class="shelf-header">
+                        <h2>Recommended for you</h2>
+                        <span>Show all</span>
+                    </div>
+                    <div class="card-grid" id="album-list">
+                        </div>
+                </section>
+
+                <section class="shelf">
+                    <div class="shelf-header">
+                        <h2>Trending songs</h2>
+                        <span>Show all</span>
+                    </div>
+                    <div class="card-grid" id="trending-songs">
+                    </div>
+                </section>
+
+                <section class="shelf">
+                    <div class="shelf-header">
+                        <h2>Popular artists</h2>
+                        <span>Show all</span>
+                    </div>
+                    <div class="card-grid" id="popular-artists">
+                    </div>
+                </section>
+
+                <section class="shelf">
+                    <div class="shelf-header">
+                        <h2>Popular radio</h2>
+                        <span>Show all</span>
+                    </div>
+                    <div class="card-grid" id="popular-radio">
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="player-bar">
+            <div class="now-playing">
+                <img src="https://via.placeholder.com/60" alt="art" id="p-art" width="56" height="56">
+                <div class="meta">
+                    <div class="title" id="p-title">Select a song</div>
+                    <div class="artist" id="p-artist">Artist Name</div>
+                </div>
+                <i class="far fa-heart heart-active"></i>
+            </div>
+
+            <div class="player-controls">
+                <div class="btns">
+                    <i class="fas fa-random"></i>
+                    <i class="fas fa-step-backward"></i>
+                    <i class="fas fa-play-circle main-play" id="playBtn"></i>
+                    <i class="fas fa-step-forward"></i>
+                    <i class="fas fa-redo"></i>
+                </div>
+                <div class="progress-wrap">
+                    <span>1:46</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill" style="width: 45%;"></div>
+                    </div>
+                    <span>3:43</span>
+                </div>
+            </div>
+
+            <div class="vol-controls">
+                <i class="fas fa-volume-up"></i>
+                <div class="vol-bg">
+                    <div class="vol-fill" style="width: 70%;"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
